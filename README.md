@@ -128,6 +128,6 @@ Eng-paloma
 
 ---
 
-**Status**: 🟢 Ativo e em desenvolvimento
+**Status**: 🟢 Ativo 
 
 
