@@ -85,6 +85,7 @@ O projeto utiliza **testes unitários com JUnit 5**, focados na validação das 
 ### Pré-requisitos
 
 - **Java 17**
+
 - **Maven**
 
 
@@ -107,5 +108,6 @@ JUnit 5
 Este projeto está licenciado sob a MIT License.
 
 👤 Autor
+
 Eng-paloma
 
