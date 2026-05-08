@@ -124,7 +124,7 @@ Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para de
 
 ## 👤 Autor
 
-Desenvolvido por [suamontclair-sudo](https://github.com/Eng-Paloma)
+Eng-paloma
 
 ---
 
