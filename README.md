@@ -124,10 +124,10 @@ Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para de
 
 ## 👤 Autor
 
-Desenvolvido por [suamontclair-sudo](https://github.com/suamontclair-sudo)
+Desenvolvido por [suamontclair-sudo](https://github.com/Eng-Paloma)
 
 ---
 
 **Status**: 🟢 Ativo e em desenvolvimento
 
-Para dúvidas ou sugestões, abra uma [issue](https://github.com/suamontclair-sudo/qa-java-mock-eligibility-engine/issues).
+
