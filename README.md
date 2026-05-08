@@ -1,133 +1,111 @@
-# QA Java Mock Eligibility Engine
+# QA Java – Motor de Elegibilidade
 
-> Plataforma robusta de QA em Java com Mock Server e Motor de Regras de Elegibilidade
+Este projeto faz parte do meu **portfólio como QA**, com foco em **validação de regras de negócio**, **criação de cenários de teste** e **automação de testes unitários** utilizando **Java**.
 
-## 📋 Descrição
-
-Um projeto especializado em **testes de integração** e **validação de regras de negócio**, desenvolvido em Java. O **qa-java-mock-eligibility-engine** fornece uma solução completa para simular serviços externos através de um mock server e executar testes sofisticados de elegibilidade com regras de negócio complexas.
-
-### Objetivos Principais
-
-- ✅ **Testes de Integração**: Validar fluxos completos entre componentes do sistema
-- ✅ **Motor de Regras**: Processar e validar regras de elegibilidade com precisão
-- ✅ **Mock Server**: Simular respostas de serviços externos para testes isolados
-- ✅ **Validação de Negócio**: Garantir conformidade com regras e políticas empresariais
-
-## 🎯 Casos de Uso
-
-- Testar elegibilidade de clientes em processos de credit approval
-- Validar fluxos de concessão de crédito
-- Simular cenários complexos de regras de negócio
-- Integrar com serviços externos de forma segura em ambiente de teste
-- Automatizar testes de integração de ponta a ponta
-
-## 🛠️ Tecnologias
-
-- **Linguagem**: Java
-- **Paradigma**: Testes Automatizados
-- **Mock Server**: Simulação de serviços externos
-- **Motor de Regras**: Processamento de elegibilidade
-- **Licença**: MIT
-
-## 📦 Funcionalidades
-
-- **Mock Server configurável** para diferentes cenários de teste
-- **Motor de Regras** flexível e extensível
-- **Testes de Integração** automatizados
-- **Validação de Elegibilidade** baseada em regras de negócio
-- **Simulação de Serviços Externos** realista
-
-## 🚀 Como Começar
-
-### Pré-requisitos
-
-- Java 11+
-- Maven ou Gradle
-- Git
-
-### Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/suamontclair-sudo/qa-java-mock-eligibility-engine.git
-
-# Acesse o diretório
-cd qa-java-mock-eligibility-engine
-
-# Instale as dependências
-mvn install
-```
-
-### Execução dos Testes
-
-```bash
-# Executar todos os testes
-mvn test
-
-# Executar com relatório de cobertura
-mvn clean test jacoco:report
-```
-
-## 📚 Estrutura do Projeto
-
-```
-qa-java-mock-eligibility-engine/
-├── src/
-│   ├── main/
-│   │   └── java/
-│   └── test/
-│       └── java/
-├── pom.xml
-└── README.md
-```
-
-## 🧪 Exemplos de Teste
-
-### Testando Elegibilidade Básica
-
-```java
-// Exemplo: Validar se cliente é elegível para crédito
-ElegibilityEngine engine = new ElegibilityEngine();
-ElegibilityResult result = engine.evaluate(clientData);
-
-assertTrue(result.isEligible());
-assertEquals(expectedLimit, result.getCreditLimit());
-```
-
-### Usando Mock Server
-
-```java
-// Exemplo: Simular resposta de serviço externo
-MockServer mockServer = new MockServer();
-mockServer.stubResponse("/api/client-score", scoreResponse);
-
-ScoreService service = new ScoreService("http://localhost:8080");
-ClientScore score = service.getScore(clientId);
-```
-
-## 📖 Documentação
-
-Para mais detalhes sobre regras de elegibilidade e configuração, consulte a documentação interna do projeto.
-
-## 🤝 Contribuições
-
-Contribuições são bem-vindas! Por favor, siga o fluxo padrão:
-
-1. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-2. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-3. Push para a branch (`git push origin feature/AmazingFeature`)
-4. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
-
-## 👤 Autor
-
-Eng-paloma
+O objetivo **não é desenvolver um sistema completo de mercado**, mas demonstrar como um profissional de **Qualidade de Software** estrutura, valida e testa **regras críticas de elegibilidade** de forma clara, organizada e sustentável.
 
 ---
 
-**Status**: 🟢 Ativo 
+## 📋 Visão do Projeto
 
+O **Eligibility Engine** é um **motor de regras de negócio** responsável por avaliar a elegibilidade de um cliente com base em critérios definidos.
+
+O projeto foi desenvolvido com mentalidade de **engenharia de qualidade**, priorizando:
+
+- Clareza das regras de negócio  
+- Testes automatizados como base da qualidade  
+- Cobertura de cenários positivos e negativos  
+- Código limpo, legível e fácil de manter  
+
+---
+
+## 🎯 Objetivo do Motor
+
+Avaliar se um cliente é **elegível** ou **não elegível** com base nos seguintes dados:
+
+- Idade  
+- Renda mensal  
+- Score de crédito  
+
+O motor retorna:
+
+- ✅ Resultado da avaliação (**Elegível / Não elegível**)  
+- 🧾 Motivo detalhado da decisão em caso de reprovação  
+
+---
+
+## ✅ Regras de Negócio Implementadas
+
+- **Idade mínima:** 18 anos  
+- **Renda mínima:** R$ 2.000,00  
+- **Score de crédito mínimo:** 600  
+
+### Comportamento esperado
+
+- Caso **qualquer regra não seja atendida**, o cliente será considerado **não elegível**, com o motivo específico.
+- Caso **todas as regras sejam atendidas**, o cliente será considerado **elegível**.
+
+---
+
+## 🏗 Arquitetura e Responsabilidades
+
+- **Client** – Representa os dados do cliente  
+- **EligibilityRule** – Interface base para regras de elegibilidade  
+- **MinimumAgeRule** – Validação de idade mínima  
+- **MinimumIncomeRule** – Validação de renda mínima  
+- **MinimumCreditScoreRule** – Validação de score mínimo  
+- **EligibilityCriteria** – Centraliza os valores de aprovação e cria o conjunto padrão de regras  
+- **EligibilityEngine** – Aplica todas as regras e agrega os motivos de reprovação  
+- **EligibilityResult** – Representa o resultado final da avaliação  
+
+---
+
+## 🧪 Testes Automatizados
+
+O projeto utiliza **testes unitários com JUnit 5**, focados na validação das regras de negócio.
+
+### Cenários cobertos
+
+- ✅ Cliente elegível  
+- ❌ Cliente menor de idade  
+- ❌ Cliente com renda insuficiente  
+- ❌ Cliente com score abaixo do mínimo  
+- ❌ Cliente com múltiplas falhas e motivos agregados  
+
+### Benefícios
+
+- Cobertura de regras críticas  
+- Prevenção de regressões  
+- Clareza de intenção nos testes  
+
+---
+
+## ▶️ Como Executar os Testes
+
+### Pré-requisitos
+
+- **Java 17**
+- **Maven**
+
+
+### Possíveis evoluções
+
+Integração com API REST
+Inclusão de testes de integração
+Simulação de serviços externos (mock server)
+Testes de contrato e testes end-to-end
+
+
+### 🛠 Tecnologias Utilizadas
+
+Java 17
+Maven
+JUnit 5
+
+
+###  📝 Licença
+Este projeto está licenciado sob a MIT License.
+
+👤 Autor
+Eng-paloma
 
