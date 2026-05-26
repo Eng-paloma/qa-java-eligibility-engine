@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # Eligibility Engine
 
 ## Visão do projeto
