@@ -1,0 +1,9 @@
+com\qa\eligibilityengine\MinimumCreditScoreRule.class
+com\qa\eligibilityengine\EligibilityEngine.class
+com\qa\eligibilityengine\App.class
+com\qa\eligibilityengine\EligibilityCriteria.class
+com\qa\eligibilityengine\Client.class
+com\qa\eligibilityengine\MinimumAgeRule.class
+com\qa\eligibilityengine\EligibilityResult.class
+com\qa\eligibilityengine\EligibilityRule.class
+com\qa\eligibilityengine\MinimumIncomeRule.class
