@@ -107,7 +107,5 @@ JUnit 5
 ###  📝 Licença
 Este projeto está licenciado sob a MIT License.
 
-👤 Autor
 
-Eng-paloma
 
